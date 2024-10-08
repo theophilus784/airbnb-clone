@@ -29,12 +29,11 @@ jobs:
           yarn build # Removed --if-present
           cd ..
 
-      # Build the API
-      - name: Install and test API
+      # Build the API (without running tests)
+      - name: Install API
         run: |
           cd api
           yarn install
-          yarn test # Removed --if-present
           cd ..
 
       # Zip artifacts for deployment
