@@ -26,7 +26,7 @@ jobs:
         run: |
           cd client
           yarn install
-          yarn build --if-present
+          yarn build # Removed --if-present
           cd ..
 
       # Build the API
@@ -34,7 +34,7 @@ jobs:
         run: |
           cd api
           yarn install
-          yarn test --if-present
+          yarn test # Removed --if-present
           cd ..
 
       # Zip artifacts for deployment
